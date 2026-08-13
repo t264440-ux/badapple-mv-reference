@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bad Apple!! MV パート別参照</title>
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<style>
+body{font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;margin:0;background:#111;color:#eee}
+header{padding:28px 5%;background:#181818;position:sticky;top:0;z-index:5}
+h1{margin:0 0 8px;font-size:clamp(22px,4vw,34px)} header p{margin:0;color:#bbb}
+main{max-width:1050px;margin:auto;padding:22px 5% 60px}
+.player{position:sticky;top:111px;z-index:4;background:#111;padding:10px 0 18px}
+.player-box{aspect-ratio:16/9;max-width:850px;margin:auto;background:#000;border-radius:12px;overflow:hidden;box-shadow:0 8px 30px #0008}
+iframe{width:100%;height:100%;border:0}
+.now{max-width:850px;margin:8px auto 0;color:#bbb;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px}
+.card{background:#1b1b1b;border:1px solid #303030;border-radius:12px;padding:17px}
+.card-head{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:8px}
+.part{font-weight:800} .time{color:#aaa;font-variant-numeric:tabular-nums}
+.card p{color:#ddd;line-height:1.65;min-height:4.8em}
+.actions{display:flex;gap:8px;flex-wrap:wrap}
+button,a{border:0;border-radius:8px;padding:9px 12px;font:inherit;text-decoration:none;cursor:pointer}
+button{background:#eee;color:#111;font-weight:700} a{background:#303030;color:#eee}
+.note{color:#aaa;font-size:13px;line-height:1.6;margin:18px 0}
+</style>
+</head>
+<body>
+<header>
+<h1>Bad Apple!! MV パート別参照</h1>
+<p>企画資料のPart 1～29に対応した参照ページ</p>
+</header>
+<main>
+<section class="player">
+<div class="player-box">
+<div id="player"></div>
+</div>
+<div class="now" id="now">パートを選択してください</div>
+</section>
+<p class="note">「このパートを再生」を押すと、指定区間から再生し、終了時刻で停止します。YouTubeの仕様上、開始位置は最も近いキーフレームに調整される場合があります。<br><strong>重要：</strong>このページはWeb上のHTTPSサイトにアップロードして使用してください。ローカルのHTMLファイルを直接開くと、YouTubeのError 153（Referer不足）が発生することがあります。</p>
+<section class="grid">
+
+      <article class="card" id="part-1">
+        <div class="card-head"><span class="part">PART 1</span><span class="time">0:00 – 0:15</span></div>
+        <p>正面でリズムに乗る → 横向きになってリンゴを投げる</p>
+        <div class="actions">
+          <button onclick="playPart(1,0,15)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=0s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-2">
+        <div class="card-head"><span class="part">PART 2</span><span class="time">0:16 – 0:28</span></div>
+        <p>投げられたリンゴを受け取り飛行する。食べ終わったリンゴを落とす</p>
+        <div class="actions">
+          <button onclick="playPart(2,16,28)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=16s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-3">
+        <div class="card-head"><span class="part">PART 3</span><span class="time">0:29 – 0:35</span></div>
+        <p>リンゴから変化し踊る。指を振る</p>
+        <div class="actions">
+          <button onclick="playPart(3,29,35)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=29s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-4">
+        <div class="card-head"><span class="part">PART 4</span><span class="time">0:36 – 0:42</span></div>
+        <p>指からズームアウトし、別な人のアバターに切り替わる。カップを落とし破片が飛ぶ。</p>
+        <div class="actions">
+          <button onclick="playPart(4,36,42)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=36s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-5">
+        <div class="card-head"><span class="part">PART 5</span><span class="time">0:43 – 0:49</span></div>
+        <p>回転する破片からアバターに切り替わり、投げナイフを投げる。</p>
+        <div class="actions">
+          <button onclick="playPart(5,43,49)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=43s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-6">
+        <div class="card-head"><span class="part">PART 6</span><span class="time">0:50 – 0:56</span></div>
+        <p>投げナイフから変化する</p>
+        <div class="actions">
+          <button onclick="playPart(6,50,56)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=50s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-7">
+        <div class="card-head"><span class="part">PART 7</span><span class="time">0:57 – 1:02</span></div>
+        <p>納刀する</p>
+        <div class="actions">
+          <button onclick="playPart(7,57,62)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=57s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-8">
+        <div class="card-head"><span class="part">PART 8</span><span class="time">1:03 – 1:10</span></div>
+        <p>扇子を持ち仰ぐ</p>
+        <div class="actions">
+          <button onclick="playPart(8,63,70)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=63s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-9">
+        <div class="card-head"><span class="part">PART 9</span><span class="time">1:11 – 1:19</span></div>
+        <p>花弁が船へと変化し、持っている武器の境界面にズームする</p>
+        <div class="actions">
+          <button onclick="playPart(9,71,79)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=71s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-10">
+        <div class="card-head"><span class="part">PART 10</span><span class="time">1:20 – 1:24</span></div>
+        <p>画面が白と黒で二分され、黒のほうへ短剣を向ける</p>
+        <div class="actions">
+          <button onclick="playPart(10,80,84)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=80s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-11">
+        <div class="card-head"><span class="part">PART 11</span><span class="time">1:25 – 1:32</span></div>
+        <p>両手に炎を持ち、腕を上げる</p>
+        <div class="actions">
+          <button onclick="playPart(11,85,92)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=85s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-12">
+        <div class="card-head"><span class="part">PART 12</span><span class="time">1:33 – 1:38</span></div>
+        <p>分身が向かい合わせで手をつなぐ</p>
+        <div class="actions">
+          <button onclick="playPart(12,93,98)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=93s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-13">
+        <div class="card-head"><span class="part">PART 13</span><span class="time">1:39 – 1:50</span></div>
+        <p>太陽に向かって手を向ける</p>
+        <div class="actions">
+          <button onclick="playPart(13,99,110)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=99s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-14">
+        <div class="card-head"><span class="part">PART 14</span><span class="time">1:50 – 2:00</span></div>
+        <p>三人でキーボード、バイオリン、トランペットを演奏する。</p>
+        <div class="actions">
+          <button onclick="playPart(14,110,120)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=110s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-15">
+        <div class="card-head"><span class="part">PART 15</span><span class="time">2:01 – 2:05</span></div>
+        <p>4人が順番に出現と消失を繰り返す</p>
+        <div class="actions">
+          <button onclick="playPart(15,121,125)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=121s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-16">
+        <div class="card-head"><span class="part">PART 16</span><span class="time">2:06 – 2:06</span></div>
+        <p>正面に向かって切る</p>
+        <div class="actions">
+          <button onclick="playPart(16,126,127)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=126s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-17">
+        <div class="card-head"><span class="part">PART 17</span><span class="time">2:07 – 2:12</span></div>
+        <p>ほうきをもって掃除をする。トランジションは回転する人を一人使用。</p>
+        <div class="actions">
+          <button onclick="playPart(17,127,132)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=127s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-18">
+        <div class="card-head"><span class="part">PART 18</span><span class="time">2:13 – 2:19</span></div>
+        <p>左に一人立っており、右に小さい人が下から出てくる。</p>
+        <div class="actions">
+          <button onclick="playPart(18,133,139)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=133s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-19">
+        <div class="card-head"><span class="part">PART 19</span><span class="time">2:20 – 2:26</span></div>
+        <p>瞳から、傘を持った人に変化する。扇子を左につきだす。</p>
+        <div class="actions">
+          <button onclick="playPart(19,140,146)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=140s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-20">
+        <div class="card-head"><span class="part">PART 20</span><span class="time">2:27 – 2:34</span></div>
+        <p>ズームアップし、回転、別な人が映り、そのあともう一度回転し元に戻る。向かい合う</p>
+        <div class="actions">
+          <button onclick="playPart(20,147,154)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=147s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-21">
+        <div class="card-head"><span class="part">PART 21</span><span class="time">2:35 – 2:40</span></div>
+        <p>手帳に字を書き、ペンを投げる。</p>
+        <div class="actions">
+          <button onclick="playPart(21,155,160)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=155s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-22">
+        <div class="card-head"><span class="part">PART 22</span><span class="time">2:41 – 2:48</span></div>
+        <p>ペンが突起に変化し、ひょうたんから酒を飲む。落ちてきた水滴にズームする。</p>
+        <div class="actions">
+          <button onclick="playPart(22,161,168)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=161s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-23">
+        <div class="card-head"><span class="part">PART 23</span><span class="time">2:49 – 2:54</span></div>
+        <p>水滴が人に変化し、人形をもち、落とす。</p>
+        <div class="actions">
+          <button onclick="playPart(23,169,174)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=169s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-24">
+        <div class="card-head"><span class="part">PART 24</span><span class="time">2:55 – 2:58</span></div>
+        <p>落とした人形が人に変化し、走る。</p>
+        <div class="actions">
+          <button onclick="playPart(24,175,178)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=175s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-25">
+        <div class="card-head"><span class="part">PART 25</span><span class="time">2:59 – 3:08</span></div>
+        <p>飛び込んだしぶきが花弁に代わり、傘を閉じて振り、ズームインする</p>
+        <div class="actions">
+          <button onclick="playPart(25,179,188)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=179s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-26">
+        <div class="card-head"><span class="part">PART 26</span><span class="time">3:09 – 3:16</span></div>
+        <p>武器を持って武器の先にズームインする</p>
+        <div class="actions">
+          <button onclick="playPart(26,189,196)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=189s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-27">
+        <div class="card-head"><span class="part">PART 27</span><span class="time">3:17 – 3:22</span></div>
+        <p>水滴が落ちてミルククラウンを作り、はねた水が人に変わる。右にはける</p>
+        <div class="actions">
+          <button onclick="playPart(27,197,202)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=197s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-28">
+        <div class="card-head"><span class="part">PART 28</span><span class="time">3:23 – 3:29</span></div>
+        <p>後ろから天井を地面に人が現れる。天井は左にはけ、地面は右にはける</p>
+        <div class="actions">
+          <button onclick="playPart(28,203,209)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=203s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+      <article class="card" id="part-29">
+        <div class="card-head"><span class="part">PART 29</span><span class="time">3:30 – 終了</span></div>
+        <p>手をつなぎ、陰陽模様に変化する。右は二番目のほうきと人に変化し、左はリンゴに変化する。</p>
+        <div class="actions">
+          <button onclick="playPart(29,210,-1)">▶ このパートを再生</button>
+          <a href="https://www.youtube.com/watch?v=FtutLA63Cp8&t=210s" target="_blank" rel="noopener">YouTubeで開く ↗</a>
+        </div>
+      </article>
+</section>
+</main>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+let ytPlayer = null;
+let stopTimer = null;
+let currentPart = null;
+
+const now = document.getElementById('now');
+const videoId = 'FtutLA63Cp8';
+
+function onYouTubeIframeAPIReady() {
+  const origin = window.location.origin;
+  ytPlayer = new YT.Player('player', {
+    videoId: videoId,
+    playerVars: {
+      playsinline: 1,
+      rel: 0,
+      origin: origin
+    },
+    events: {
+      onReady: () => {
+        now.textContent = 'パートを選択してください';
+      }
+    }
+  });
+}
+
+function playPart(n, start, end) {
+  if (!ytPlayer || typeof ytPlayer.seekTo !== 'function') {
+    now.textContent = 'プレーヤーを読み込み中です。少し待ってから再度押してください。';
+    return;
+  }
+
+  clearTimeout(stopTimer);
+  currentPart = n;
+  now.textContent = `Part ${n}：${formatTime(start)}～${end >= 0 ? formatTime(end) : '終了'} を再生中`;
+
+  ytPlayer.seekTo(start, true);
+  ytPlayer.playVideo();
+
+  if (end >= 0) {
+    const durationMs = Math.max(500, (end - start) * 1000);
+    stopTimer = setTimeout(() => {
+      ytPlayer.pauseVideo();
+      now.textContent = `Part ${n}：指定区間終了`;
+    }, durationMs);
+  }
+}
+
+function formatTime(sec) {
+  const m = Math.floor(sec / 60);
+  const s = Math.floor(sec % 60).toString().padStart(2, '0');
+  return `${m}:${s}`;
+}
+</script>
+</body>
+</html>
